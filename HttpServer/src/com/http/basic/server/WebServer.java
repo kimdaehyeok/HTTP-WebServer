@@ -1,4 +1,4 @@
-package com.http.server;
+package com.http.basic.server;
 
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -22,8 +22,10 @@ public class WebServer {
             Socket connection;
             
             while ((connection = listenSocket.accept()) != null) {
-                RequestHandler requestHandler = new RequestHandler(connection);
-                requestHandler.start();
+//                RequestHandler requestHandler = new RequestHandler(connection);
+//                requestHandler.start();
+                RequestHandlerHtml tt = new RequestHandlerHtml(connection);
+                tt.start();
             }
         }
     }

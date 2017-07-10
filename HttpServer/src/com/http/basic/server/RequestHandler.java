@@ -1,4 +1,4 @@
-package com.http.server;
+package com.http.basic.server;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
