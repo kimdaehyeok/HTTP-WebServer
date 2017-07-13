@@ -14,10 +14,12 @@ public class WebServer {
         } else {
             port = Integer.parseInt(args[0]);
         }
-
+        String name = "A=B=C";
+        name.split("=");
+        
         // 서버소켓을 생성한다. 웹서버는 기본적으로 8080번 포트를 사용한다.
-        try (ServerSocket listenSocket = new ServerSocket(port)) {
-            
+        try (ServerSocket listenSocket = new ServerSocket(port)) 
+        {
             // 클라이언트가 연결될때까지 대기한다.
             Socket connection;
             
